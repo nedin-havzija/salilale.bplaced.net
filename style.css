@@ -8,6 +8,8 @@ body {
     background: #f3f3f5;
 }
 
+
+
 .body-fixed {
     position: fixed;
     width: 100%;
@@ -1847,4 +1849,5 @@ p {
     .blog-box {
         padding: 20px;
     }
+
 }

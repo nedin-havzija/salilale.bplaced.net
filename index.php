@@ -1,3 +1,9 @@
+<?php
+// Ensure session is only started once
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +18,69 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- for swiper slider  -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
     <!-- fancy box  -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .login-dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 200px;
+            z-index: 1000;
+        }
+
+        .login-dropdown input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-dropdown button {
+            width: 100%;
+            padding: 8px;
+            background: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header-btn {
+            position: relative;
+        }
+
+        /* Admin Panel Styling */
+        .admin-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Spacing between buttons */
+            position: relative;
+        }
+
+        .admin-controls a {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .admin-controls a:hover {
+            background: #ff5733;
+            color: white;
+        }
+    </style>
 </head>
 
 <body class="body-fixed">
@@ -26,7 +90,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header-logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="logo.png" width="160" height="36" alt="Logo">
                         </a>
                     </div>
@@ -55,15 +119,71 @@
                                 <i class="uil uil-shopping-bag"></i>
                                 <span class="cart-number">3</span>
                             </a>
-                            <a href="javascript:void(0)" class="header-btn">
-                                <i class="uil uil-user-md"></i>
-                            </a>
+
+                            <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) : ?>
+                                <div class="admin-controls">
+                                    <a href="admin.php">Admin Panel</a>
+                                    <a href="logout.php">Logout</a>
+                                </div>
+                            <?php else : ?>
+                                <div class="header-btn" id="loginBtn">
+                                    <i class="uil uil-user-md"></i>
+                                    <div class="login-dropdown" id="loginDropdown">
+                                        <input type="text" id="username" placeholder="Username">
+                                        <input type="password" id="password" placeholder="Password">
+                                        <button onclick="login()">Log In</button>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <script>
+        document.getElementById("loginBtn").addEventListener("click", function (event) {
+            let dropdown = document.getElementById("loginDropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            event.stopPropagation(); // Prevents closing when clicking the button itself
+        });
+
+        document.getElementById("loginDropdown").addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevents closing when clicking inside the dropdown
+        });
+
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            fetch("login.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password)
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === "success") {
+                    location.reload(); // Reload page to show admin controls
+                } else {
+                    alert("Invalid credentials! Try again.");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+
+        document.addEventListener("click", function (event) {
+            let loginDropdown = document.getElementById("loginDropdown");
+
+            // If the click is outside the dropdown and the button, close it
+            if (loginDropdown.style.display === "block") {
+                loginDropdown.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
     <!-- header ends  -->
 
     <div id="viewport">
