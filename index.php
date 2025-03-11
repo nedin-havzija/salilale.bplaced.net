@@ -606,8 +606,8 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="sec-title text-center mb-5">
-                                    <p class="sec-sub-title mb-3">Our Team</p>
-                                    <h2 class="h2-title">Meet our Chefs</h2>
+                                    <p class="sec-sub-title mb-3">Unser Team</p>
+                                    <h2 class="h2-title">Treffe unsere Chefs</h2>
                                     <div class="sec-title-shape mb-4">
                                         <img src="assets/images/title-shape.svg" alt="">
                                     </div>
@@ -691,13 +691,13 @@ if (session_status() === PHP_SESSION_NONE) {
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="sec-title text-center mb-5">
-                                    <p class="sec-sub-title mb-3">What they say</p>
-                                    <h2 class="h2-title">What our customers <span>say about us</span></h2>
-                                    <div class="sec-title-shape mb-4">
-                                        <img src="assets/images/title-shape.svg" alt="">
-                                    </div>
+                            <div class="sec-title text-center mb-5">
+                                <p class="sec-sub-title mb-3">Was sie sagen</p>
+                                <h2 class="h2-title">Was unsere Kunden <span>über uns sagen</span></h2>
+                                <div class="sec-title-shape mb-4">
+                                    <img src="assets/images/title-shape.svg" alt="">
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <div class="row">
@@ -720,82 +720,78 @@ if (session_status() === PHP_SESSION_NONE) {
                                                     </div>
                                                 </div>
 
-                                            </div>
-                                            <div class="testimonials-box-text">
-                                                <h3 class="h3-title">
-                                                    Nilay Hirpara
-                                                </h3>
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-                                                    quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="testimonials-box">
-                                            <div class="testimonial-box-top">
-                                                <div class="testimonials-box-img back-img"
-                                                    style="background-image: url(assets/images/testimonials/t2.jpg);">
                                                 </div>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width:80%"></span>
+                                                <div class="testimonials-box-text">
+                                                    <h3 class="h3-title">
+                                                        Nilay Hirpara
+                                                    </h3>
+                                                    <p>Ich war anfangs skeptisch, aber der Service hat mich komplett überzeugt. Schnelle Lieferung, tolle Qualität – absolut empfehlenswert!</p>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="testimonials-box">
+                                                        <div class="testimonial-box-top">
+                                                            <div class="testimonials-box-img back-img"
+                                                                style="background-image: url(assets/images/testimonials/t2.jpg);">
+                                                            </div>
+                                                            <div class="star-rating-wp">
+                                                                <div class="star-rating">
+                                                                    <span class="star-rating__fill" style="width:80%"></span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="testimonials-box-text">
+                                                            <h3 class="h3-title">
+                                                                Ravi Kumawat
+                                                            </h3>
+                                                            <p>Ich habe selten so einen freundlichen Kundenservice erlebt! Die Mitarbeiter haben sich wirklich Zeit genommen, um meine Fragen zu beantworten.</p>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-sm-6">
+                                                    <div class="testimonials-box">
+                                                        <div class="testimonial-box-top">
+                                                            <div class="testimonials-box-img back-img"
+                                                                style="background-image: url(assets/images/testimonials/t3.jpg);">
+                                                            </div>
+                                                            <div class="star-rating-wp">
+                                                                <div class="star-rating">
+                                                                    <span class="star-rating__fill" style="width:89%"></span>
+                                                                </div>
+                                                            </div>
 
-                                            </div>
-                                            <div class="testimonials-box-text">
-                                                <h3 class="h3-title">
-                                                    Ravi Kumawat
-                                                </h3>
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-                                                    quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="testimonials-box">
-                                            <div class="testimonial-box-top">
-                                                <div class="testimonials-box-img back-img"
-                                                    style="background-image: url(assets/images/testimonials/t3.jpg);">
-                                                </div>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width:89%"></span>
+                                                        </div>
+                                                        <div class="testimonials-box-text">
+                                                            <h3 class="h3-title">
+                                                                Navnit Kumar
+                                                            </h3>
+                                                            <p>Top Qualität! Ich nutze das Produkt nun seit mehreren Monaten und bin immer noch begeistert. Es hält genau das, was versprochen wurde.</p>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-sm-6">
+                                                    <div class="testimonials-box">
+                                                        <div class="testimonial-box-top">
+                                                            <div class="testimonials-box-img back-img"
+                                                                style="background-image: url(assets/images/testimonials/t4.jpg);">
+                                                            </div>
+                                                            <div class="star-rating-wp">
+                                                                <div class="star-rating">
+                                                                    <span class="star-rating__fill" style="width:100%"></span>
+                                                                </div>
+                                                            </div>
 
-                                            </div>
-                                            <div class="testimonials-box-text">
-                                                <h3 class="h3-title">
-                                                    Navnit Kumar
-                                                </h3>
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-                                                    quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="testimonials-box">
-                                            <div class="testimonial-box-top">
-                                                <div class="testimonials-box-img back-img"
-                                                    style="background-image: url(assets/images/testimonials/t4.jpg);">
-                                                </div>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width:100%"></span>
+                                                        </div>
+                                                        <div class="testimonials-box-text">
+                                                            <h3 class="h3-title">
+                                                                Somyadeep Bhowmik
+                                                            </h3>
+                                                            <p>Perfekt! Ich bin rundum zufrieden – von der Bestellung bis zur Lieferung lief alles reibungslos. Ich werde auf jeden Fall wieder hier kaufen.</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-
-                                            </div>
-                                            <div class="testimonials-box-text">
-                                                <h3 class="h3-title">
-                                                    Somyadeep Bhowmik
-                                                </h3>
-                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-                                                    quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -804,59 +800,50 @@ if (session_status() === PHP_SESSION_NONE) {
             </section>
 
             <section class="faq-sec section-repeat-img" style="background-image: url(assets/images/faq-bg.png);">
-                <div class="sec-wp">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="sec-title text-center mb-5">
-                                    <p class="sec-sub-title mb-3">faqs</p>
-                                    <h2 class="h2-title">Frequently <span>asked questions</span></h2>
-                                    <div class="sec-title-shape mb-4">
-                                        <img src="assets/images/title-shape.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
+    <div class="sec-wp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sec-title text-center mb-5">
+                        <p class="sec-sub-title mb-3">FAQs</p>
+                        <h2 class="h2-title">Häufig <span>gestellte Fragen</span></h2>
+                        <div class="sec-title-shape mb-4">
+                            <img src="assets/images/title-shape.svg" alt="">
                         </div>
-
-                        <div class="faq-row">
-                            <div class="faq-box">
-                                <h4 class="h4-title">What are the login hours?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio.</p>
-                            </div>
-                            <div class="faq-box">
-                                <h4 class="h4-title">What do i get my refund?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio. Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="faq-box">
-                                <h4 class="h4-title">How long it will take food to arrive?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio.</p>
-                            </div>
-                            <div class="faq-box">
-                                <h4 class="h4-title">Does your restaurant has both veg and non veg?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio. Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Voluptates, distinctio?</p>
-                            </div>
-                            <div class="faq-box">
-                                <h4 class="h4-title">What is cost of food delivery?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio. Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Nam officiis ducimus, cum enim repudiandae animi.</p>
-                            </div>
-                            <div class="faq-box">
-                                <h4 class="h4-title">Who is eligible for pro membership?</h4>
-                                <p>It is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsum
-                                    vitae fugit laboriosam dolor distinctio. </p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+            </div>
 
-            </section>
+            <div class="faq-row">
+                <div class="faq-box">
+                    <h4 class="h4-title">Wie sind die Anmeldezeiten?</h4>
+                    <p>Unsere Plattform ist rund um die Uhr verfügbar. Bei Wartungsarbeiten informieren wir Sie im Voraus.</p>
+                </div>
+                <div class="faq-box">
+                    <h4 class="h4-title">Wann erhalte ich meine Rückerstattung?</h4>
+                    <p>Rückerstattungen werden in der Regel innerhalb von 3–5 Werktagen bearbeitet. In einigen Fällen kann es je nach Bank bis zu 10 Tage dauern.</p>
+                </div>
+                <div class="faq-box">
+                    <h4 class="h4-title">Wie lange dauert die Lieferung des Essens?</h4>
+                    <p>Die Lieferzeit hängt vom Standort ab, beträgt aber in der Regel zwischen 30 und 60 Minuten.</p>
+                </div>
+                <div class="faq-box">
+                    <h4 class="h4-title">Bietet Ihr Restaurant sowohl vegetarische als auch nicht-vegetarische Speisen an?</h4>
+                    <p>Ja, wir haben eine große Auswahl an vegetarischen und nicht-vegetarischen Gerichten. Alle Speisen sind deutlich gekennzeichnet.</p>
+                </div>
+                <div class="faq-box">
+                    <h4 class="h4-title">Wie hoch sind die Lieferkosten?</h4>
+                    <p>Die Lieferkosten variieren je nach Entfernung und Bestellwert. Ab einem Bestellwert von 30 € ist die Lieferung kostenlos.</p>
+                </div>
+                <div class="faq-box">
+                    <h4 class="h4-title">Wer kann eine Pro-Mitgliedschaft erhalten?</h4>
+                    <p>Jeder Kunde kann eine Pro-Mitgliedschaft abschließen, um exklusive Rabatte und schnellere Lieferungen zu erhalten.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
             <div class="bg-pattern bg-light repeat-img"
