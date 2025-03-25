@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- fancy box  -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.3">
     <style>
 /* 🔹 General Header Styles */
 .header-right {
@@ -846,97 +846,131 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
 
-            <div class="bg-pattern bg-light repeat-img"
-                style="background-image: url(assets/images/blog-pattern-bg.png);">
-                <section class="blog-sec section" id="blog">
-                    <div class="sec-wp">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="sec-title text-center mb-5">
-                                        <p class="sec-sub-title mb-3">Our blog</p>
-                                        <h2 class="h2-title">Latest Publications</span></h2>
-                                        <div class="sec-title-shape mb-4">
-                                            <img src="assets/images/title-shape.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="blog-box">
-                                        <div class="blog-img back-img"
-                                            style="background-image: url(assets/images/blog/blog1.jpg);"></div>
-                                        <div class="blog-text">
-                                            <p class="blog-date">September.15.2021</p>
-                                            <a href="#" class="h4-title">Energy Drink which you can make at home.</a>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa
-                                                explicabo atque reprehenderit beatae! Accusantium soluta consequuntur
-                                                blanditiis amet ad.</p>
-                                            <a href="#" class="sec-btn">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="blog-box">
-                                        <div class="blog-img back-img"
-                                            style="background-image: url(assets/images/blog/blog2.jpg);"></div>
-                                        <div class="blog-text">
-                                            <p class="blog-date">October.15.2021</p>
-                                            <a href="#" class="h4-title">Fresh Veggie and rice combo for dinner.</a>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa
-                                                explicabo atque reprehenderit beatae! Accusantium soluta consequuntur
-                                                blanditiis amet ad.</p>
-                                            <a href="#" class="sec-btn">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="blog-box">
-                                        <div class="blog-img back-img"
-                                            style="background-image: url(assets/images/blog/blog3.jpg);"></div>
-                                        <div class="blog-text">
-                                            <p class="blog-date">November.15.2021</p>
-                                            <a href="#" class="h4-title">Chicken burger with double nuggets</a>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa
-                                                explicabo atque reprehenderit beatae! Accusantium soluta consequuntur
-                                                blanditiis amet ad.</p>
-                                            <a href="#" class="sec-btn">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
+<div class="bg-pattern bg-light repeat-img"
+    style="background-image: url(assets/images/blog-pattern-bg.png);">
+    <section class="blog-sec section" id="blog">
+        <div class="sec-wp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title text-center mb-5">
+                            <p class="sec-sub-title mb-3">Unser Blog</p>
+                            <h2 class="h2-title">Neueste Beiträge</h2>
+                            <div class="sec-title-shape mb-4">
+                                <img src="assets/images/title-shape.svg" alt="">
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <section class="newsletter-sec section pt-0">
-                    <div class="sec-wp">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8 m-auto">
-                                    <div class="newsletter-box text-center back-img white-text"
-                                        style="background-image: url(assets/images/news.jpg);">
-                                        <div class="bg-overlay dark-overlay"></div>
-                                        <div class="sec-wp">
-                                            <div class="newsletter-box-text">
-                                                <h2 class="h2-title">Subscribe our newsletter</h2>
-                                                <p>This is Lorem ipsum dolor sit amet consectetur adipisicing elit ad
-                                                    veritatis.</p>
-                                            </div>
-                                            <form action="#" class="newsletter-form">
-                                                <input type="email" class="form-input"
-                                                    placeholder="Enter your Email Here" required>
-                                                <button type="submit" class="sec-btn primary-btn">Submit</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="blog-box">
+                            <div class="blog-img back-img"
+                                style="background-image: url(assets/images/blog/blog1.jpg);"></div>
+                            <div class="blog-text">
+                                <p class="blog-date">15. September 2021</p>
+                                <a href="#" class="h4-title">Energie-Drink ganz einfach zuhause zubereiten</a>
+                                <p>Entdecke, wie du aus natürlichen Zutaten einen leckeren Energie-Drink mixen kannst – perfekt für den Start in den Tag.</p>
+                                <a href="#" class="sec-btn">Mehr lesen</a>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="col-lg-4">
+                        <div class="blog-box">
+                            <div class="blog-img back-img"
+                                style="background-image: url(assets/images/blog/blog2.jpg);"></div>
+                            <div class="blog-text">
+                                <p class="blog-date">15. Oktober 2021</p>
+                                <a href="#" class="h4-title">Frische Gemüse-Reis-Kombination für das Abendessen</a>
+                                <p>Gesund, leicht und schnell zubereitet: So kombinierst du frisches Gemüse und Reis für ein ausgewogenes Abendessen.</p>
+                                <a href="#" class="sec-btn">Mehr lesen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-box">
+                            <div class="blog-img back-img"
+                                style="background-image: url(assets/images/blog/blog3.jpg);"></div>
+                            <div class="blog-text">
+                                <p class="blog-date">15. November 2021</p>
+                                <a href="#" class="h4-title">Chicken-Burger mit doppelten Nuggets</a>
+                                <p>Ein Genuss für Fleischliebhaber: Saftiger Chicken-Burger mit doppelt knusprigen Nuggets und hausgemachter Soße.</p>
+                                <a href="#" class="sec-btn">Mehr lesen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="newsletter-sec section pt-0">
+        <div class="sec-wp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 m-auto">
+                        <div class="newsletter-box text-center back-img white-text"
+                            style="background-image: url(assets/images/news.jpg);">
+                            <div class="bg-overlay dark-overlay"></div>
+                            <div class="sec-wp">
+                                <div class="newsletter-box-text">
+                                    <h2 class="h2-title">Abonniere unseren Newsletter</h2>
+                                    <p>Erhalte exklusive Rezepte, Tipps und Aktionen direkt in dein Postfach – bleib immer informiert!</p>
+                                </div>
+                                <form action="#" class="newsletter-form">
+                                    <input type="email" class="form-input"
+                                        placeholder="Gib deine E-Mail-Adresse ein" required>
+                                    <button type="submit" class="sec-btn primary-btn">Absenden</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-form">
+                            <h3>Kontaktiere uns</h3>
+                            <form id="contact-form">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="from_name" placeholder="Dein Name" required>
+                                
+                                <label for="email">E-Mail:</label>
+                                <input type="email" id="email" name="from_email" placeholder="Deine E-Mail-Adresse" required>
+                                
+                                <label for="message">Nachricht:</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht" required></textarea>
+                                
+                                <button type="submit" id="button">Nachricht senden</button>
+                            </form>
+
+                            <!-- EmailJS CDN -->
+                            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                            <script type="text/javascript">
+                                emailjs.init("jBo_qyx7uWt6jlBvq"); // Dein Public Key
+
+                                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                    event.preventDefault();
+
+                                    emailjs.sendForm('service_v31ou6n', 'template_es29i9l', this)
+                                        .then(function() {
+                                            console.log('✅ Nachricht erfolgreich gesendet!');
+                                            document.getElementById('contact-form').reset();
+                                        }, function(error) {
+                                            console.log('❌ Fehler beim Senden der Nachricht:', error);
+                                        });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+
 
             <!-- footer starts  -->
             <footer class="site-footer" id="contact">
