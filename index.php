@@ -1,8 +1,8 @@
 <?php
-// Ensure session is only started once
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+include "config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- fancy box  -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
-    <link rel="stylesheet" href="style.css?v=1.3">
+    <link rel="stylesheet" href="style.css?v=1.9">
     <style>
 /* 🔹 General Header Styles */
 .header-right {
@@ -179,9 +179,15 @@ if (session_status() === PHP_SESSION_NONE) {
                         </form>
 
                         <!-- Warenkorb -->
-                        <a href="javascript:void(0)" class="header-btn header-cart">
+                        <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+?>
+                        <a href="checkout.php" class="header-btn header-cart">
                             <i class="uil uil-shopping-bag"></i>
-                            <span class="cart-number">3</span>
+                            <span class="cart-number"><?= $cart_count; ?></span>
                         </a>
 
                         <!-- Benutzer-Login / Admin-Bereich -->
@@ -273,7 +279,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <span>indischen</span>
                             Restaurant.
                         </h1>
-                        <p>Genießen Sie authentische indische Küche mit frischen Zutaten und traditionellen Gewürzen. Lassen Sie sich von unseren köstlichen Gerichten verwöhnen und erleben Sie einen unvergesslichen Geschmack.</p>
+                        <p>Geniessen Sie authentische indische Küche mit frischen Zutaten und traditionellen Gewürzen. Lassen Sie sich von unseren köstlichen Gerichten verwöhnen und erleben Sie einen unvergesslichen Geschmack.</p>
                         <div class="banner-btn mt-4">
                             <a href="#menu" class="sec-btn">Unsere Speisekarte ansehen</a>
                         </div>
@@ -336,7 +342,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <div class="sec-title-shape mb-4">
                         <img src="assets/images/title-shape.svg" alt="Dekorative Linie">
                     </div>
-                    <p>Willkommen in unserem Restaurant! Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Gästen authentische Aromen und hochwertige Zutaten zu bieten. Unser Team vereint traditionelle Rezepte mit moderner Kochkunst, um Ihnen ein einzigartiges Geschmackserlebnis zu garantieren. Lassen Sie sich von unseren Gerichten verzaubern und genießen Sie eine unvergessliche kulinarische Reise.</p>
+                    <p>Willkommen in unserem Restaurant! Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Gästen authentische Aromen und hochwertige Zutaten zu bieten. Unser Team vereint traditionelle Rezepte mit moderner Kochkunst, um Ihnen ein einzigartiges Geschmackserlebnis zu garantieren. Lassen Sie sich von unseren Gerichten verzaubern und geniessen Sie eine unvergessliche kulinarische Reise.</p>
                 </div>
             </div>
         </div>
@@ -356,6 +362,8 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </div>
 </section>
+
+
 
             <?php
                 include "config.php"; // Include DB connection
@@ -450,9 +458,9 @@ if (session_status() === PHP_SESSION_NONE) {
                                             <b>€ <?= number_format($item['price'], 2); ?></b>
                                         </li>
                                         <li>
-                                            <button class="dish-add-btn">
-                                                <i class="uil uil-plus"></i>
-                                            </button>
+                                        <button class="dish-add-btn" onclick="addToCart(<?= $item['id']; ?>)">
+                                            <i class="uil uil-plus"></i>
+                                        </button>
                                         </li>
                                     </ul>
                                 </div>
@@ -464,6 +472,31 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+let adding = false;
+
+function addToCart(itemId) {
+    if (adding) return; // ignore rapid clicks
+    adding = true;
+
+    $.ajax({
+        url: 'add_to_cart.php',
+        method: 'POST',
+        data: { id: itemId },
+        dataType: 'json', // important!
+        success: function(response) {
+            if (response.success) {
+                $('.cart-number').text(response.cart_count);
+            }
+        },
+        complete: function() {
+            adding = false;
+        }
+    });
+}
+</script>
 
 
 <section class="two-col-sec section">
@@ -829,7 +862,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
                 <div class="faq-box">
                     <h4 class="h4-title">Bietet Ihr Restaurant sowohl vegetarische als auch nicht-vegetarische Speisen an?</h4>
-                    <p>Ja, wir haben eine große Auswahl an vegetarischen und nicht-vegetarischen Gerichten. Alle Speisen sind deutlich gekennzeichnet.</p>
+                    <p>Ja, wir haben eine grosse Auswahl an vegetarischen und nicht-vegetarischen Gerichten. Alle Speisen sind deutlich gekennzeichnet.</p>
                 </div>
                 <div class="faq-box">
                     <h4 class="h4-title">Wie hoch sind die Lieferkosten?</h4>
@@ -837,7 +870,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
                 <div class="faq-box">
                     <h4 class="h4-title">Wer kann eine Pro-Mitgliedschaft erhalten?</h4>
-                    <p>Jeder Kunde kann eine Pro-Mitgliedschaft abschließen, um exklusive Rabatte und schnellere Lieferungen zu erhalten.</p>
+                    <p>Jeder Kunde kann eine Pro-Mitgliedschaft abschliessen, um exklusive Rabatte und schnellere Lieferungen zu erhalten.</p>
                 </div>
             </div>
         </div>
@@ -894,7 +927,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <div class="blog-text">
                                 <p class="blog-date">15. November 2021</p>
                                 <a href="#" class="h4-title">Chicken-Burger mit doppelten Nuggets</a>
-                                <p>Ein Genuss für Fleischliebhaber: Saftiger Chicken-Burger mit doppelt knusprigen Nuggets und hausgemachter Soße.</p>
+                                <p>Ein Genuss für Fleischliebhaber: Saftiger Chicken-Burger mit doppelt knusprigen Nuggets und hausgemachter Sosse.</p>
                                 <a href="#" class="sec-btn">Mehr lesen</a>
                             </div>
                         </div>
@@ -904,143 +937,132 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </section>
 
-    <section class="newsletter-sec section pt-0">
+</div>
+<section class="section pt-0">
+  <div class="container">
+    <div class="row align-items-start gx-5">
+      
+      <!-- Kontaktformular -->
+      <div class="col-lg-6">
+        <div class="contact-form-box">
+          <h3>Kontaktiere uns</h3>
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="from_name" placeholder="Dein Name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="from_email" placeholder="Deine E-Mail-Adresse" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht" required></textarea>
+
+            <button type="submit" id="button">Nachricht senden</button>
+          </form>
+
+          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+          <script>
+            emailjs.init("jBo_qyx7uWt6jlBvq");
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              emailjs.sendForm('service_v31ou6n', 'template_es29i9l', this)
+                .then(function() {
+                  console.log('✅ Nachricht erfolgreich gesendet!');
+                  document.getElementById('contact-form').reset();
+                }, function(error) {
+                  console.log('❌ Fehler beim Senden der Nachricht:', error);
+                });
+            });
+          </script>
+        </div>
+      </div>
+
+      <!-- Newsletter Box -->
+      <div class="col-lg-6">
+        <div class="newsletter-box-wrapper" style="background-image: url('assets/images/news.jpg');">
+          <div class="bg-overlay"></div>
+          <div class="content-wrap">
+            <h2>Abonniere unseren Newsletter</h2>
+            <p>Erhalte exklusive Rezepte, Tipps und Aktionen direkt in dein Postfach – bleib immer informiert!</p>
+            <form action="#" class="newsletter-form">
+              <input type="email" placeholder="Gib deine E-Mail-Adresse ein" required>
+              <button type="submit">Absenden</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+            <!-- footer starts  -->
+<footer class="site-footer" id="contact">
+    <div class="top-footer section">
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 m-auto">
-                        <div class="newsletter-box text-center back-img white-text"
-                            style="background-image: url(assets/images/news.jpg);">
-                            <div class="bg-overlay dark-overlay"></div>
-                            <div class="sec-wp">
-                                <div class="newsletter-box-text">
-                                    <h2 class="h2-title">Abonniere unseren Newsletter</h2>
-                                    <p>Erhalte exklusive Rezepte, Tipps und Aktionen direkt in dein Postfach – bleib immer informiert!</p>
-                                </div>
-                                <form action="#" class="newsletter-form">
-                                    <input type="email" class="form-input"
-                                        placeholder="Gib deine E-Mail-Adresse ein" required>
-                                    <button type="submit" class="sec-btn primary-btn">Absenden</button>
-                                </form>
+                    <div class="col-lg-4">
+                        <div class="footer-info">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="logo.png" alt="Logo">
+                                </a>
+                            </div>
+                            <p>Besuchen Sie unser Restaurant und geniesen Sie frische, hausgemachte Spezialitäten in angenehmer Atmosphäre.</p>
+                            <div class="social-icon">
+                                <!-- Optional: Add social icons here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-flex-box">
+                            <div class="footer-table-info">
+                                <h3 class="h3-title">Öffnungszeiten</h3>
+                                <ul>
+                                    <li><i class="uil uil-clock"></i> Montag - Donnerstag: 09:00 - 22:00 Uhr</li>
+                                    <li><i class="uil uil-clock"></i> Freitag - Sonntag: 11:00 - 20:00 Uhr</li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu food-nav-menu">
+                                <h3 class="h3-title">Links</h3>
+                                <ul class="column-2">
+                                    <li><a href="#home" class="footer-active-menu">Startseite</a></li>
+                                    <li><a href="#about">Über uns</a></li>
+                                    <li><a href="#menu">Speisekarte</a></li>
+                                    <li><a href="#gallery">Galerie</a></li>
+                                    <li><a href="#blog">Blog</a></li>
+                                    <li><a href="#contact">Kontakt</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu">
+                                <h3 class="h3-title">Unternehmen</h3>
+                                <ul>
+                                    <li><a href="#">AGB</a></li>
+                                    <li><a href="#">Datenschutz</a></li>
+                                    <li><a href="#">Cookie-Richtlinie</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-form">
-                            <h3>Kontaktiere uns</h3>
-                            <form id="contact-form">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="from_name" placeholder="Dein Name" required>
-                                
-                                <label for="email">E-Mail:</label>
-                                <input type="email" id="email" name="from_email" placeholder="Deine E-Mail-Adresse" required>
-                                
-                                <label for="message">Nachricht:</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Deine Nachricht" required></textarea>
-                                
-                                <button type="submit" id="button">Nachricht senden</button>
-                            </form>
-
-                            <!-- EmailJS CDN -->
-                            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-                            <script type="text/javascript">
-                                emailjs.init("jBo_qyx7uWt6jlBvq"); // Dein Public Key
-
-                                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                                    event.preventDefault();
-
-                                    emailjs.sendForm('service_v31ou6n', 'template_es29i9l', this)
-                                        .then(function() {
-                                            console.log('✅ Nachricht erfolgreich gesendet!');
-                                            document.getElementById('contact-form').reset();
-                                        }, function(error) {
-                                            console.log('❌ Fehler beim Senden der Nachricht:', error);
-                                        });
-                                });
-                            </script>
-                        </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2025 <span class="name">FOODHave.</span> Alle Rechte vorbehalten.</p>
                     </div>
                 </div>
-
-
-
-            <!-- footer starts  -->
-            <footer class="site-footer" id="contact">
-                <div class="top-footer section">
-                    <div class="sec-wp">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="footer-info">
-                                        <div class="footer-logo">
-                                            <a href="index.html">
-                                                <img src="logo.png" alt="">
-                                            </a>
-                                        </div>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, tenetur.
-                                        </p>
-                                        <div class="social-icon">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="footer-flex-box">
-                                        <div class="footer-table-info">
-                                            <h3 class="h3-title">open hours</h3>
-                                            <ul>
-                                                <li><i class="uil uil-clock"></i> Mon-Thurs : 9am - 22pm</li>
-                                                <li><i class="uil uil-clock"></i> Fri-Sun : 11am - 22pm</li>
-                                            </ul>
-                                        </div>
-                                        <div class="footer-menu food-nav-menu">
-                                            <h3 class="h3-title">Links</h3>
-                                            <ul class="column-2">
-                                                <li>
-                                                    <a href="#home" class="footer-active-menu">Home</a>
-                                                </li>
-                                                <li><a href="#about">About</a></li>
-                                                <li><a href="#menu">Menu</a></li>
-                                                <li><a href="#gallery">Gallery</a></li>
-                                                <li><a href="#blog">Blog</a></li>
-                                                <li><a href="#contact">Contact</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="footer-menu">
-                                            <h3 class="h3-title">Company</h3>
-                                            <ul>
-                                                <li><a href="#">Terms & Conditions</a></li>
-                                                <li><a href="#">Privacy Policy</a></li>
-                                                <li><a href="#">Cookie Policy</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <div class="copyright-text">
-                                    <p>Copyright &copy; 2021 <span class="name">TechieCoder.</span>All Rights Reserved.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="scrolltop"><i class="uil uil-angle-up"></i></button>
-                    </div>
-                </div>
-            </footer>
+            </div>
+            <button class="scrolltop"><i class="uil uil-angle-up"></i></button>
+        </div>
+    </div>
+</footer>
 
 
 

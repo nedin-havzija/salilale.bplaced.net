@@ -1391,6 +1391,183 @@ p {
   background: linear-gradient(145deg, #0c0c21, #0e0e28);
 }
 
+/* ROW AND COLUMNS */
+.section .container .row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height: 100%;
+}
+
+.col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* CONTACT FORM BOX */
+.contact-form-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-box h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contact-form-box button {
+  padding: 14px;
+  border: none;
+  background-color: #ff6b35;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.contact-form-box button:hover {
+  background-color: #e65c29;
+}
+
+/* NEWSLETTER BOX */
+.newsletter-box-wrapper {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-box-wrapper .bg-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.newsletter-box-wrapper .content-wrap {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter-box-wrapper h2,
+.newsletter-box-wrapper p {
+  color: #ffffff !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.newsletter-box-wrapper h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.newsletter-box-wrapper p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* FORM - MAKE INPUT FIELD LONGER THAN BUTTON */
+.newsletter-box-wrapper .newsletter-form {
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  border-radius: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.newsletter-box-wrapper .newsletter-form input {
+  flex: 3; /* THIS makes the input field much longer */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+.newsletter-box-wrapper .newsletter-form button {
+  flex-shrink: 0;
+  padding: 12px 22px;
+  background-color: #ff6b35;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.newsletter-box-wrapper .newsletter-form button:hover {
+  background-color: #e65c29;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 991px) {
+  .section .container .row {
+    flex-wrap: wrap;
+  }
+
+  .newsletter-box-wrapper .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .newsletter-box-wrapper .newsletter-form input,
+  .newsletter-box-wrapper .newsletter-form button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .newsletter-box-wrapper .newsletter-form button {
+    margin-top: 10px;
+  }
+}
+
 /* ***************** footer ****************** */
 
 .footer-form {
