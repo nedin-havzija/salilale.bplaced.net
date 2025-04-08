@@ -140,12 +140,17 @@ include "config.php";
     background: #ff5733;
     color: white;
 }
+
+.header-right .btn {
+    margin-left: 5px;
+}
+
     </style>
 </head>
 
 <body class="body-fixed">
     <!-- Beginn der Kopfzeile -->
-<header class="site-header">
+    <header class="site-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
@@ -156,7 +161,7 @@ include "config.php";
                 </div>
             </div>
             <div class="col-lg-10">
-                <div class="main-navigation">
+                <div class="main-navigation d-flex align-items-center justify-content-between">
                     <button class="menu-toggle"><span></span><span></span></button>
                     <nav class="header-menu">
                         <ul class="menu food-nav-menu">
@@ -169,7 +174,8 @@ include "config.php";
                         </ul>
                     </nav>
 
-                    <div class="header-right">
+                    <div class="header-right d-flex align-items-center gap-4">
+
                         <!-- Suchfunktion -->
                         <form action="#" class="header-search-form for-des">
                             <input type="search" class="form-input" placeholder="Hier suchen...">
@@ -180,38 +186,52 @@ include "config.php";
 
                         <!-- Warenkorb -->
                         <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-$cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-?>
+                        if (session_status() === PHP_SESSION_NONE) {
+                            session_start();
+                        }
+                        $cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+                        ?>
                         <a href="checkout.php" class="header-btn header-cart">
                             <i class="uil uil-shopping-bag"></i>
                             <span class="cart-number"><?= $cart_count; ?></span>
                         </a>
 
-                        <!-- Benutzer-Login / Admin-Bereich -->
-                        <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true) : ?>
-                            <div class="header-btn admin-controls">
-                                <a href="admin.php">Admin-Bereich</a>
-                                <a href="logout.php" class="logout-btn">Abmelden</a>
-                            </div>
-                        <?php else : ?>
-                            <div class="header-btn" id="loginBtn">
-                                <i class="uil uil-user-md"></i>
-                                <div class="login-dropdown" id="loginDropdown">
-                                    <input type="text" id="username" placeholder="Benutzername">
-                                    <input type="password" id="password" placeholder="Passwort">
-                                    <button onclick="login()">Anmelden</button>
-                                </div>
-                            </div>
-                        <?php endif; ?>
+                        <!-- Login/Userbereich -->
+                        <?php if (isset($_SESSION["username"])) : ?>
+    <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2 px-3 py-1" style="background: #f3f3f3; border-radius: 8px;">
+            <i class="uil uil-user" style="font-size: 18px;"></i>
+            <span style="font-weight: 500;"><?= htmlspecialchars($_SESSION["username"]); ?></span>
+        </div>
+
+        <?php if (!empty($_SESSION["admin"])) : ?>
+            <a href="admin.php" class="btn btn-sm btn-outline-secondary" style="border-radius: 8px;">Admin-Bereich</a>
+        <?php endif; ?>
+
+        <a href="logout.php" class="btn btn-sm btn-dark" style="font-weight: 600; border-radius: 8px;">Abmelden</a>
+    </div>
+    <?php else : ?>
+    <div class="header-btn" id="loginBtn">
+        <i class="uil uil-user-md"></i>
+        <div class="login-dropdown" id="loginDropdown">
+            <input type="text" id="username" placeholder="Benutzername">
+            <input type="password" id="password" placeholder="Passwort">
+            <button onclick="login()">Anmelden</button>
+            <!-- Add the Register Link here -->
+            <div class="text-center mt-2">
+                <a href="register.php" style="font-size: 14px;">Noch kein Konto? Registrieren</a>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
 
     <script>
         document.getElementById("loginBtn").addEventListener("click", function (event) {
