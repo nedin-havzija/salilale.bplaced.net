@@ -1161,17 +1161,6 @@ function addToCart(itemId) {
         </div>
     </div>
 
-
-
-    <script>
-  const toggleBtn = document.getElementById('mobileMenuToggle');
-  const nav = document.getElementById('mainNav');
-
-  toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('show');
-  });
-</script>
-
     <!-- jquery  -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <!-- bootstrap -->
