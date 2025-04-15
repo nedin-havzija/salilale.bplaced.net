@@ -50,7 +50,7 @@ if (!empty($cart)) {
 <head>
     <meta charset="UTF-8">
     <title>Checkout - Food Website</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/views/assets/css/bootstrap.min.css">
     <style>
         body {
     font-family: 'Segoe UI', sans-serif;

@@ -229,7 +229,7 @@ include __DIR__ . '/config/config.php';
       <div class="col-6 col-lg-2">
         <div class="header-logo">
           <a href="index.php">
-            <img src="app/views/assets/logo.png" width="160" height="36" alt="Logo">
+            <img src="views/assets/logo.png" width="160" height="36" alt="Logo">
           </a>
         </div>
       </div>
@@ -355,10 +355,10 @@ include __DIR__ . '/config/config.php';
             <section class="main-banner" id="home">
     <div class="js-parallax-scene">
         <div class="banner-shape-1 w-100" data-depth="0.30">
-            <img src="app/views/assets/images/berry.png" alt="Beere">
+            <img src="views/assets/images/berry.png" alt="Beere">
         </div>
         <div class="banner-shape-2 w-100" data-depth="0.25">
-            <img src="app/views/assets/images/leaf.png" alt="Blatt">
+            <img src="views/assets/images/leaf.png" alt="Blatt">
         </div>
     </div>
     <div class="sec-wp">
@@ -405,19 +405,19 @@ include __DIR__ . '/config/config.php';
                             </div>
                             <div class="brands-row">
                                 <div class="brands-box">
-                                    <img src="app/views/assets/images/brands/b1.png" alt="">
+                                    <img src="views/assets/images/brands/b1.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="app/views/assets/images/brands/b2.png" alt="">
+                                    <img src="views/assets/images/brands/b2.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="app/views/assets/images/brands/b3.png" alt="">
+                                    <img src="views/assets/images/brands/b3.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="app/views/assets/images/brands/b4.png" alt="">
+                                    <img src="views/assets/images/brands/b4.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="app/views/assets/images/brands/b5.png" alt="">
+                                    <img src="views/assets/images/brands/b5.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -433,7 +433,7 @@ include __DIR__ . '/config/config.php';
                     <p class="sec-sub-title mb-3">Über uns</p>
                     <h2 class="h2-title">Entdecken Sie <span>unsere Geschichte</span></h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
+                        <img src="views/assets/images/title-shape.svg" alt="Dekorative Linie">
                     </div>
                     <p>Willkommen in unserem Restaurant! Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Gästen authentische Aromen und hochwertige Zutaten zu bieten. Unser Team vereint traditionelle Rezepte mit moderner Kochkunst, um Ihnen ein einzigartiges Geschmackserlebnis zu garantieren. Lassen Sie sich von unseren Gerichten verzaubern und geniessen Sie eine unvergessliche kulinarische Reise.</p>
                 </div>
@@ -476,7 +476,7 @@ include __DIR__ . '/config/config.php';
                         <p class="sec-sub-title mb-3">Unsere Speisekarte</p>
                         <h2 class="h2-title">Starte den Tag <span>mit frischer & gesunder Kost</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
+                            <img src="views/assets/images/title-shape.svg" alt="Dekorative Linie">
                         </div>
                     </div>
                 </div>
@@ -488,19 +488,19 @@ include __DIR__ . '/config/config.php';
                             <ul class="filters">
                                 <div class="filter-active"></div>
                                 <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                                    <img src="app/views/assets/images/menu-1.png" alt="">
+                                    <img src="views/assets/images/menu-1.png" alt="">
                                     Alle Gerichte
                                 </li>
                                 <li class="filter" data-filter=".breakfast">
-                                    <img src="app/views/assets/images/menu-2.png" alt="">
+                                    <img src="views/assets/images/menu-2.png" alt="">
                                     Frühstück
                                 </li>
                                 <li class="filter" data-filter=".lunch">
-                                    <img src="app/views/assets/images/menu-3.png" alt="">
+                                    <img src="views/assets/images/menu-3.png" alt="">
                                     Mittagessen
                                 </li>
                                 <li class="filter" data-filter=".dinner">
-                                    <img src="app/views/assets/images/menu-4.png" alt="">
+                                    <img src="views/assets/images/menu-4.png" alt="">
                                     Abendessen
                                 </li>
                             </ul>
@@ -598,7 +598,7 @@ function addToCart(itemId) {
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="sec-img mt-5">
-                    <img src="app/views/assets/images/pizza.png" alt="Leckere Pizza">
+                    <img src="views/assets/images/pizza.png" alt="Leckere Pizza">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -624,7 +624,7 @@ function addToCart(itemId) {
             </div>
             <div class="col-lg-6 order-lg-2 order-1">
                 <div class="sec-img">
-                    <img src="app/views/assets/images/sushi.png" alt="Frisches Sushi">
+                    <img src="views/assets/images/sushi.png" alt="Frisches Sushi">
                 </div>
             </div>
         </div>
@@ -633,11 +633,11 @@ function addToCart(itemId) {
 
             <section class="book-table section bg-light">
                 <div class="book-table-shape">
-                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
+                    <img src="views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="book-table-shape book-table-shape2">
-                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
+                    <img src="views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="sec-wp">
@@ -648,7 +648,7 @@ function addToCart(itemId) {
                     <p class="sec-sub-title mb-3">Tischreservierung</p>
                     <h2 class="h2-title">Öffnungszeiten & Reservierung</h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="app/views/assets/images/title-shape.svg" alt="Dekoratives Element">
+                        <img src="views/assets/images/title-shape.svg" alt="Dekoratives Element">
                     </div>
                 </div>
             </div>
@@ -736,7 +736,7 @@ function addToCart(itemId) {
                                     <p class="sec-sub-title mb-3">Unser Team</p>
                                     <h2 class="h2-title">Treffe unsere Chefs</h2>
                                     <div class="sec-title-shape mb-4">
-                                        <img src="app/views/assets/images/title-shape.svg" alt="">
+                                        <img src="views/assets/images/title-shape.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -822,7 +822,7 @@ function addToCart(itemId) {
                                 <p class="sec-sub-title mb-3">Was sie sagen</p>
                                 <h2 class="h2-title">Was unsere Kunden <span>über uns sagen</span></h2>
                                 <div class="sec-title-shape mb-4">
-                                    <img src="app/views/assets/images/title-shape.svg" alt="">
+                                    <img src="views/assets/images/title-shape.svg" alt="">
                                 </div>
                             </div>
                             </div>
@@ -830,7 +830,7 @@ function addToCart(itemId) {
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="testimonials-img">
-                                    <img src="app/views/assets/images/testimonial-img.png" alt="">
+                                    <img src="views/assets/images/testimonial-img.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-7">
@@ -935,7 +935,7 @@ function addToCart(itemId) {
                         <p class="sec-sub-title mb-3">FAQs</p>
                         <h2 class="h2-title">Häufig <span>gestellte Fragen</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="app/views/assets/images/title-shape.svg" alt="">
+                            <img src="views/assets/images/title-shape.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -984,7 +984,7 @@ function addToCart(itemId) {
                             <p class="sec-sub-title mb-3">Unser Blog</p>
                             <h2 class="h2-title">Neueste Beiträge</h2>
                             <div class="sec-title-shape mb-4">
-                                <img src="app/views/assets/images/title-shape.svg" alt="">
+                                <img src="views/assets/images/title-shape.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1101,7 +1101,7 @@ function addToCart(itemId) {
                         <div class="footer-info">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="app/views/assets/logo.png" alt="Logo">
+                                    <img src="views/assets/logo.png" alt="Logo">
                                 </a>
                             </div>
                             <p>Besuchen Sie unser Restaurant und geniesen Sie frische, hausgemachte Spezialitäten in angenehmer Atmosphäre.</p>

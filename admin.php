@@ -162,48 +162,48 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
   <div class="container">
-    <h2 class="text-center mb-4">Admin Panel</h2>
+    <h2 class="text-center mb-4">Admin-Bereich</h2>
     <div class="d-flex justify-content-between">
-      <a href="index.php" class="btn btn-secondary">← Back to Home</a>
-      <a href="logout.php" class="btn btn-danger">Logout</a>
+      <a href="index.php" class="btn btn-secondary">← Zurück zur Startseite</a>
+      <a href="logout.php" class="btn btn-danger">Abmelden</a>
     </div>
 
-    <h3 class="mt-4">Add Food Item</h3>
+    <h3 class="mt-4">Speise hinzufügen</h3>
     <form method="POST" enctype="multipart/form-data" class="row g-3">
       <div class="col-md-6">
-        <input type="text" name="name" class="form-control" placeholder="Food Name" required>
+        <input type="text" name="name" class="form-control" placeholder="Name der Speise" required>
       </div>
       <div class="col-md-6">
-        <input type="text" name="description" class="form-control" placeholder="Description" required>
+        <input type="text" name="description" class="form-control" placeholder="Beschreibung" required>
       </div>
       <div class="col-md-4">
-        <input type="number" name="price" class="form-control" placeholder="Price" step="0.01" required>
+        <input type="number" name="price" class="form-control" placeholder="Preis" step="0.01" required>
       </div>
       <div class="col-md-4">
         <select name="category" class="form-select" required>
-          <option value="Breakfast">Breakfast</option>
-          <option value="Lunch">Lunch</option>
-          <option value="Dinner">Dinner</option>
+          <option value="Breakfast">Frühstück</option>
+          <option value="Lunch">Mittagessen</option>
+          <option value="Dinner">Abendessen</option>
         </select>
       </div>
       <div class="col-md-4">
         <input type="file" name="image" class="form-control" accept="image/*">
       </div>
       <div class="col-md-12 text-center">
-        <button type="submit" name="add_food" class="btn btn-success">Add Food</button>
+        <button type="submit" name="add_food" class="btn btn-success">Speise hinzufügen</button>
       </div>
     </form>
 
-    <h3 class="mt-4">Existing Food Items</h3>
+    <h3 class="mt-4">Vorhandene Speisen</h3>
     <table class="table table-striped">
       <thead class="table-dark">
         <tr>
-          <th>Image</th>
+          <th>Bild</th>
           <th>Name</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Category</th>
-          <th>Action</th>
+          <th>Beschreibung</th>
+          <th>Preis</th>
+          <th>Kategorie</th>
+          <th>Aktion</th>
         </tr>
       </thead>
       <tbody>
@@ -212,22 +212,20 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td>
               <img 
                 src="<?= htmlspecialchars($item["image"]) ?>" 
-                alt="Food" 
+                alt="Speisebild" 
                 onerror="this.src='assets/images/no-image.png';"
               >
             </td>
             <td><?= htmlspecialchars($item["name"]) ?></td>
             <td><?= htmlspecialchars($item["description"]) ?></td>
-            <td>$<?= number_format($item["price"], 2) ?></td>
+            <td>€<?= number_format($item["price"], 2) ?></td>
             <td><?= htmlspecialchars($item["category"]) ?></td>
             <td>
-              <!-- Delete form -->
               <form method="POST" style="display:inline;">
                 <input type="hidden" name="delete_id" value="<?= $item["id"] ?>">
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-danger">Löschen</button>
               </form>
 
-              <!-- Edit button triggers modal -->
               <button 
                 type="button" 
                 class="btn btn-primary" 
@@ -239,7 +237,7 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   <?= json_encode($item["category"]) ?>
                 )'
               >
-                Edit
+                Bearbeiten
               </button>
             </td>
           </tr>
@@ -248,7 +246,7 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
   </div>
 
-  <!-- Bootstrap Modal for Editing -->
+  <!-- Modal zum Bearbeiten -->
   <div 
     class="modal fade" 
     id="editModal" 
@@ -261,12 +259,12 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <form method="POST" class="needs-validation" novalidate>
           <input type="hidden" name="edit_id" id="edit_id" />
           <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Edit Food Item</h5>
+            <h5 class="modal-title" id="editModalLabel">Speise bearbeiten</h5>
             <button 
               type="button" 
               class="btn-close" 
               data-bs-dismiss="modal" 
-              aria-label="Close"
+              aria-label="Schließen"
             ></button>
           </div>
           <div class="modal-body">
@@ -281,7 +279,7 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
               >
             </div>
             <div class="mb-3">
-              <label for="edit_description" class="form-label">Description</label>
+              <label for="edit_description" class="form-label">Beschreibung</label>
               <input 
                 type="text" 
                 name="edit_description" 
@@ -291,7 +289,7 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
               >
             </div>
             <div class="mb-3">
-              <label for="edit_price" class="form-label">Price</label>
+              <label for="edit_price" class="form-label">Preis</label>
               <input 
                 type="number" 
                 name="edit_price" 
@@ -302,16 +300,16 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
               >
             </div>
             <div class="mb-3">
-              <label for="edit_category" class="form-label">Category</label>
+              <label for="edit_category" class="form-label">Kategorie</label>
               <select 
                 name="edit_category" 
                 id="edit_category" 
                 class="form-select" 
                 required
               >
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
+                <option value="Breakfast">Frühstück</option>
+                <option value="Lunch">Mittagessen</option>
+                <option value="Dinner">Abendessen</option>
               </select>
             </div>
           </div>
@@ -321,14 +319,14 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
               class="btn btn-secondary" 
               data-bs-dismiss="modal"
             >
-              Close
+              Schließen
             </button>
             <button 
               type="submit" 
               name="edit_food" 
               class="btn btn-primary"
             >
-              Save Changes
+              Änderungen speichern
             </button>
           </div>
         </form>
@@ -336,33 +334,31 @@ $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </div>
 
-  <!-- Bootstrap Bundle JS (enables the modal) -->
+  <!-- Bootstrap Bundle JS (für das Modal) -->
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
   </script>
 
   <script>
-    // This function populates the modal inputs and shows the modal
+    // Diese Funktion befüllt das Modal und zeigt es an
     function showEditForm(id, name, description, price, category) {
-      // Get references to modal fields
       var editId = document.getElementById('edit_id');
       var editName = document.getElementById('edit_name');
       var editDescription = document.getElementById('edit_description');
       var editPrice = document.getElementById('edit_price');
       var editCategory = document.getElementById('edit_category');
 
-      // Fill the modal fields
       editId.value = id;
       editName.value = name;
       editDescription.value = description;
       editPrice.value = price;
       editCategory.value = category;
 
-      // Show the Bootstrap modal
       var editModal = new bootstrap.Modal(document.getElementById('editModal'));
       editModal.show();
     }
   </script>
 
 </body>
+
 </html>
