@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include 'cart_helpers.php';
+include __DIR__ . '/app/models/cart_helpers.php';
 
 $id = intval($_POST['id'] ?? 0);
 if ($id <= 0) {

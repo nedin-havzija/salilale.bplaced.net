@@ -6,7 +6,7 @@ $tax_rate = 0.061;
 $tax = $total * $tax_rate;
 $total_with_tax = $total + $shipping + $tax;
 
-include "config.php";
+include __DIR__ . '/config/config.php';
 $cart = $_SESSION['cart'] ?? [];
 $food_items = [];
 

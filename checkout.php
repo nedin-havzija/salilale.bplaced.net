@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include "config.php";
+include __DIR__ . '/config/config.php';
 
 // --- Merge cart properly ---
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
@@ -229,7 +229,7 @@ h3 {
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
-                <a href="index.php"><img src="logo.png" width="160" alt="Logo"></a>
+                <a href="index.php"><img src="assets/logo.png" width="160" alt="Logo"></a>
             </div>
             <div class="col-lg-10 text-end">
                 <a href="checkout.php" class="header-btn header-cart">

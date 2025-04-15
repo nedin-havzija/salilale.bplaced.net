@@ -3,7 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include 'cart_helpers.php';
+include __DIR__ . '/config/config.php';
 
 $id = intval($_POST['id']);
 $action = $_POST['action']; // 'plus' or 'minus'

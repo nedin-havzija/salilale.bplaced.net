@@ -14,7 +14,7 @@ $bestelltext = "Neue Bestellung von $name\n\nAdresse: $adresse\nE-Mail: $email\n
 
 $gesamt = 0;
 if (!empty($cart)) {
-    include "config.php";
+    include __DIR__ . '/config/config.php';
 
     $ids = array_column($cart, 'id');
     $placeholders = implode(',', array_fill(0, count($ids), '?'));

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "config.php";
+include __DIR__ . '/config/config.php';
 
 // Check if admin is logged in
 if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {

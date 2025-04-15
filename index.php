@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include "config.php";
+include __DIR__ . '/config/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,8 @@ include "config.php";
     <!-- fancy box  -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
-    <link rel="stylesheet" href="style.css?v=1.9">
+    <link rel="stylesheet" href="assets/style.css?v=1.9">
+
     <style>
 /* 🔹 General Header Styles */
 .header-right {
@@ -228,7 +229,7 @@ include "config.php";
       <div class="col-6 col-lg-2">
         <div class="header-logo">
           <a href="index.php">
-            <img src="logo.png" width="160" height="36" alt="Logo">
+            <img src="assets/logo.png" width="160" height="36" alt="Logo">
           </a>
         </div>
       </div>
@@ -458,7 +459,8 @@ include "config.php";
 
 
             <?php
-                include "config.php"; // Include DB connection
+                include __DIR__ . '/config/config.php';
+                // Include DB connection
 
                 // Fetch all food items from database
                 $stmt = $conn->query("SELECT * FROM food_items ORDER BY id DESC");
@@ -1099,7 +1101,7 @@ function addToCart(itemId) {
                         <div class="footer-info">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="logo.png" alt="Logo">
+                                    <img src="assets/logo.png" alt="Logo">
                                 </a>
                             </div>
                             <p>Besuchen Sie unser Restaurant und geniesen Sie frische, hausgemachte Spezialitäten in angenehmer Atmosphäre.</p>
@@ -1195,7 +1197,8 @@ function addToCart(itemId) {
     <!-- smooth scroll  -->
     <script src="assets/js/smooth-scroll.js"></script>
     <!-- custom js  -->
-    <script src="main.js"></script>
+    <script src="assets/main.js"></script>
+
 
 </body>
 
