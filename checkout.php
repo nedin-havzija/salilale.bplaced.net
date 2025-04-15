@@ -229,7 +229,7 @@ h3 {
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
-                <a href="index.php"><img src="assets/logo.png" width="160" alt="Logo"></a>
+                <a href="index.php"><img src="app/views/assets/logo.png" width="160" alt="Logo"></a>
             </div>
             <div class="col-lg-10 text-end">
                 <a href="checkout.php" class="header-btn header-cart">

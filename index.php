@@ -15,13 +15,13 @@ include __DIR__ . '/config/config.php';
     <!-- for icons  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- bootstrap  -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/views/assets/css/bootstrap.min.css">
     <!-- for swiper slider  -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="app/views/assets/css/swiper-bundle.min.css">
     <!-- fancy box  -->
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="app/views/assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
-    <link rel="stylesheet" href="assets/style.css?v=1.9">
+    <link rel="stylesheet" href="app/views/assets/style.css?v=1.9">
 
     <style>
 /* 🔹 General Header Styles */
@@ -229,7 +229,7 @@ include __DIR__ . '/config/config.php';
       <div class="col-6 col-lg-2">
         <div class="header-logo">
           <a href="index.php">
-            <img src="assets/logo.png" width="160" height="36" alt="Logo">
+            <img src="app/views/assets/logo.png" width="160" height="36" alt="Logo">
           </a>
         </div>
       </div>
@@ -355,10 +355,10 @@ include __DIR__ . '/config/config.php';
             <section class="main-banner" id="home">
     <div class="js-parallax-scene">
         <div class="banner-shape-1 w-100" data-depth="0.30">
-            <img src="assets/images/berry.png" alt="Beere">
+            <img src="app/views/assets/images/berry.png" alt="Beere">
         </div>
         <div class="banner-shape-2 w-100" data-depth="0.25">
-            <img src="assets/images/leaf.png" alt="Blatt">
+            <img src="app/views/assets/images/leaf.png" alt="Blatt">
         </div>
     </div>
     <div class="sec-wp">
@@ -405,19 +405,19 @@ include __DIR__ . '/config/config.php';
                             </div>
                             <div class="brands-row">
                                 <div class="brands-box">
-                                    <img src="assets/images/brands/b1.png" alt="">
+                                    <img src="app/views/assets/images/brands/b1.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="assets/images/brands/b2.png" alt="">
+                                    <img src="app/views/assets/images/brands/b2.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="assets/images/brands/b3.png" alt="">
+                                    <img src="app/views/assets/images/brands/b3.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="assets/images/brands/b4.png" alt="">
+                                    <img src="app/views/assets/images/brands/b4.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="assets/images/brands/b5.png" alt="">
+                                    <img src="app/views/assets/images/brands/b5.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -433,7 +433,7 @@ include __DIR__ . '/config/config.php';
                     <p class="sec-sub-title mb-3">Über uns</p>
                     <h2 class="h2-title">Entdecken Sie <span>unsere Geschichte</span></h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="assets/images/title-shape.svg" alt="Dekorative Linie">
+                        <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
                     </div>
                     <p>Willkommen in unserem Restaurant! Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Gästen authentische Aromen und hochwertige Zutaten zu bieten. Unser Team vereint traditionelle Rezepte mit moderner Kochkunst, um Ihnen ein einzigartiges Geschmackserlebnis zu garantieren. Lassen Sie sich von unseren Gerichten verzaubern und geniessen Sie eine unvergessliche kulinarische Reise.</p>
                 </div>
@@ -476,7 +476,7 @@ include __DIR__ . '/config/config.php';
                         <p class="sec-sub-title mb-3">Unsere Speisekarte</p>
                         <h2 class="h2-title">Starte den Tag <span>mit frischer & gesunder Kost</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="assets/images/title-shape.svg" alt="Dekorative Linie">
+                            <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
                         </div>
                     </div>
                 </div>
@@ -488,19 +488,19 @@ include __DIR__ . '/config/config.php';
                             <ul class="filters">
                                 <div class="filter-active"></div>
                                 <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                                    <img src="assets/images/menu-1.png" alt="">
+                                    <img src="app/views/assets/images/menu-1.png" alt="">
                                     Alle Gerichte
                                 </li>
                                 <li class="filter" data-filter=".breakfast">
-                                    <img src="assets/images/menu-2.png" alt="">
+                                    <img src="app/views/assets/images/menu-2.png" alt="">
                                     Frühstück
                                 </li>
                                 <li class="filter" data-filter=".lunch">
-                                    <img src="assets/images/menu-3.png" alt="">
+                                    <img src="app/views/assets/images/menu-3.png" alt="">
                                     Mittagessen
                                 </li>
                                 <li class="filter" data-filter=".dinner">
-                                    <img src="assets/images/menu-4.png" alt="">
+                                    <img src="app/views/assets/images/menu-4.png" alt="">
                                     Abendessen
                                 </li>
                             </ul>
@@ -598,7 +598,7 @@ function addToCart(itemId) {
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="sec-img mt-5">
-                    <img src="assets/images/pizza.png" alt="Leckere Pizza">
+                    <img src="app/views/assets/images/pizza.png" alt="Leckere Pizza">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -624,7 +624,7 @@ function addToCart(itemId) {
             </div>
             <div class="col-lg-6 order-lg-2 order-1">
                 <div class="sec-img">
-                    <img src="assets/images/sushi.png" alt="Frisches Sushi">
+                    <img src="app/views/assets/images/sushi.png" alt="Frisches Sushi">
                 </div>
             </div>
         </div>
@@ -633,11 +633,11 @@ function addToCart(itemId) {
 
             <section class="book-table section bg-light">
                 <div class="book-table-shape">
-                    <img src="assets/images/table-leaves-shape.png" alt="">
+                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="book-table-shape book-table-shape2">
-                    <img src="assets/images/table-leaves-shape.png" alt="">
+                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="sec-wp">
@@ -648,7 +648,7 @@ function addToCart(itemId) {
                     <p class="sec-sub-title mb-3">Tischreservierung</p>
                     <h2 class="h2-title">Öffnungszeiten & Reservierung</h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="assets/images/title-shape.svg" alt="Dekoratives Element">
+                        <img src="app/views/assets/images/title-shape.svg" alt="Dekoratives Element">
                     </div>
                 </div>
             </div>
@@ -736,7 +736,7 @@ function addToCart(itemId) {
                                     <p class="sec-sub-title mb-3">Unser Team</p>
                                     <h2 class="h2-title">Treffe unsere Chefs</h2>
                                     <div class="sec-title-shape mb-4">
-                                        <img src="assets/images/title-shape.svg" alt="">
+                                        <img src="app/views/assets/images/title-shape.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -822,7 +822,7 @@ function addToCart(itemId) {
                                 <p class="sec-sub-title mb-3">Was sie sagen</p>
                                 <h2 class="h2-title">Was unsere Kunden <span>über uns sagen</span></h2>
                                 <div class="sec-title-shape mb-4">
-                                    <img src="assets/images/title-shape.svg" alt="">
+                                    <img src="app/views/assets/images/title-shape.svg" alt="">
                                 </div>
                             </div>
                             </div>
@@ -830,7 +830,7 @@ function addToCart(itemId) {
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="testimonials-img">
-                                    <img src="assets/images/testimonial-img.png" alt="">
+                                    <img src="app/views/assets/images/testimonial-img.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-7">
@@ -935,7 +935,7 @@ function addToCart(itemId) {
                         <p class="sec-sub-title mb-3">FAQs</p>
                         <h2 class="h2-title">Häufig <span>gestellte Fragen</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="assets/images/title-shape.svg" alt="">
+                            <img src="app/views/assets/images/title-shape.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -984,7 +984,7 @@ function addToCart(itemId) {
                             <p class="sec-sub-title mb-3">Unser Blog</p>
                             <h2 class="h2-title">Neueste Beiträge</h2>
                             <div class="sec-title-shape mb-4">
-                                <img src="assets/images/title-shape.svg" alt="">
+                                <img src="app/views/assets/images/title-shape.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1101,7 +1101,7 @@ function addToCart(itemId) {
                         <div class="footer-info">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/logo.png" alt="Logo">
+                                    <img src="app/views/assets/logo.png" alt="Logo">
                                 </a>
                             </div>
                             <p>Besuchen Sie unser Restaurant und geniesen Sie frische, hausgemachte Spezialitäten in angenehmer Atmosphäre.</p>
@@ -1163,41 +1163,19 @@ function addToCart(itemId) {
         </div>
     </div>
 
-    <!-- jquery  -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-
-    <!-- fontawesome  -->
-    <script src="assets/js/font-awesome.min.js"></script>
-
-    <!-- swiper slider  -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <!-- mixitup -- filter  -->
-    <script src="assets/js/jquery.mixitup.min.js"></script>
-
-    <!-- fancy box  -->
-    <script src="assets/js/jquery.fancybox.min.js"></script>
-
-    <!-- parallax  -->
-    <script src="assets/js/parallax.min.js"></script>
-
-    <!-- gsap  -->
-    <script src="assets/js/gsap.min.js"></script>
-
-    <!-- scroll trigger  -->
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- scroll to plugin  -->
-    <script src="assets/js/ScrollToPlugin.min.js"></script>
-    <!-- rellax  -->
-    <!-- <script src="assets/js/rellax.min.js"></script> -->
-    <!-- <script src="assets/js/rellax-custom.js"></script> -->
-    <!-- smooth scroll  -->
-    <script src="assets/js/smooth-scroll.js"></script>
-    <!-- custom js  -->
-    <script src="assets/main.js"></script>
+    <script src="app/views/assets/js/jquery-3.5.1.min.js"></script>
+<script src="app/views/assets/js/bootstrap.min.js"></script>
+<script src="app/views/assets/js/popper.min.js"></script>
+<script src="app/views/assets/js/font-awesome.min.js"></script>
+<script src="app/views/assets/js/swiper-bundle.min.js"></script>
+<script src="app/views/assets/js/jquery.mixitup.min.js"></script>
+<script src="app/views/assets/js/jquery.fancybox.min.js"></script>
+<script src="app/views/assets/js/parallax.min.js"></script>
+<script src="app/views/assets/js/gsap.min.js"></script>
+<script src="app/views/assets/js/ScrollTrigger.min.js"></script>
+<script src="app/views/assets/js/ScrollToPlugin.min.js"></script>
+<script src="app/views/assets/js/smooth-scroll.js"></script>
+<script src="app/views/assets/main.js"></script>
 
 
 </body>
