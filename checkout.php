@@ -293,8 +293,8 @@ h3 {
     <?php endif; ?>
 </div>
 
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="app/views/assets/js/jquery-3.5.1.min.js"></script>
+<script src="app/views/assets/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function () {
     $('.quantity-btn').click(function () {

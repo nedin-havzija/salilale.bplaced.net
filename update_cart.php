@@ -6,7 +6,12 @@ if (session_status() === PHP_SESSION_NONE) {
 include __DIR__ . '/config/config.php';
 
 $id = intval($_POST['id']);
-$action = $_POST['action']; // 'plus' or 'minus'
+$action = $_POST['action'] ?? '';
+
+if (!isset($_SESSION['cart']) || !is_array($_SESSION['cart'])) {
+    echo json_encode(['success' => false, 'message' => 'Cart not found']);
+    exit;
+}
 
 foreach ($_SESSION['cart'] as $key => &$item) {
     if ($item['id'] == $id) {
@@ -22,9 +27,6 @@ foreach ($_SESSION['cart'] as $key => &$item) {
     }
 }
 unset($item);
-
-// ✅ Merge duplicates
-merge_cart_items($_SESSION['cart']);
 
 session_write_close();
 echo json_encode(['success' => true]);

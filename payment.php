@@ -32,7 +32,7 @@ if (!empty($cart)) {
   <title>Zur Kasse – FOODHave</title>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script> (function() { emailjs.init('jBo_qyx7uWt6jlBvq'); })(); </script>
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/views/assets/css/bootstrap.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -188,7 +188,7 @@ if (!empty($cart)) {
           <td align="right">€<?= number_format($shipping, 2, ',', '.'); ?></td>
         </tr>
         <tr>
-          <td>MWSt (6.1%)</td>
+          <td>MWSt (8.1%)</td>
           <td align="right">€<?= number_format($tax, 2, ',', '.'); ?></td>
         </tr>
       </tbody>

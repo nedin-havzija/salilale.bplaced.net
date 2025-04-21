@@ -229,7 +229,7 @@ include __DIR__ . '/config/config.php';
       <div class="col-6 col-lg-2">
         <div class="header-logo">
           <a href="index.php">
-            <img src="views/assets/logo.png" width="160" height="36" alt="Logo">
+            <img src="app/views/assets/logo.png" width="160" height="36" alt="Logo">
           </a>
         </div>
       </div>
@@ -355,10 +355,10 @@ include __DIR__ . '/config/config.php';
             <section class="main-banner" id="home">
     <div class="js-parallax-scene">
         <div class="banner-shape-1 w-100" data-depth="0.30">
-            <img src="views/assets/images/berry.png" alt="Beere">
+            <img src="app/views/assets/images/berry.png" alt="Beere">
         </div>
         <div class="banner-shape-2 w-100" data-depth="0.25">
-            <img src="views/assets/images/leaf.png" alt="Blatt">
+            <img src="app/views/assets/images/leaf.png" alt="Blatt">
         </div>
     </div>
     <div class="sec-wp">
@@ -382,7 +382,7 @@ include __DIR__ . '/config/config.php';
                 <!-- Bildbereich -->
                 <div class="col-lg-6">
                     <div class="banner-img-wp">
-                        <div class="banner-img" style="background-image: url(assets/images/main-b.jpg);">
+                        <div class="banner-img" style="background-image: url(app/views/assets/images/main-b.jpg);">
                         </div>
                     </div>
                     <div class="banner-img-text mt-4 m-auto">
@@ -405,19 +405,19 @@ include __DIR__ . '/config/config.php';
                             </div>
                             <div class="brands-row">
                                 <div class="brands-box">
-                                    <img src="views/assets/images/brands/b1.png" alt="">
+                                    <img src="app/views/assets/images/brands/b1.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="views/assets/images/brands/b2.png" alt="">
+                                    <img src="app/views/assets/images/brands/b2.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="views/assets/images/brands/b3.png" alt="">
+                                    <img src="app/views/assets/images/brands/b3.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="views/assets/images/brands/b4.png" alt="">
+                                    <img src="app/views/assets/images/brands/b4.png" alt="">
                                 </div>
                                 <div class="brands-box">
-                                    <img src="views/assets/images/brands/b5.png" alt="">
+                                    <img src="app/views/assets/images/brands/b5.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -433,7 +433,7 @@ include __DIR__ . '/config/config.php';
                     <p class="sec-sub-title mb-3">Über uns</p>
                     <h2 class="h2-title">Entdecken Sie <span>unsere Geschichte</span></h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="views/assets/images/title-shape.svg" alt="Dekorative Linie">
+                        <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
                     </div>
                     <p>Willkommen in unserem Restaurant! Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Gästen authentische Aromen und hochwertige Zutaten zu bieten. Unser Team vereint traditionelle Rezepte mit moderner Kochkunst, um Ihnen ein einzigartiges Geschmackserlebnis zu garantieren. Lassen Sie sich von unseren Gerichten verzaubern und geniessen Sie eine unvergessliche kulinarische Reise.</p>
                 </div>
@@ -442,10 +442,10 @@ include __DIR__ . '/config/config.php';
         <div class="row">
             <div class="col-lg-8 m-auto">
                 <div class="about-video">
-                    <div class="about-video-img" style="background-image: url(assets/images/about.jpg);">
+                    <div class="about-video-img" style="background-image: url(app/views/assets/images/about.jpg);">
                     </div>
                     <div class="play-btn-wp">
-                        <a href="assets/images/video.mp4" data-fancybox="video" class="play-btn">
+                        <a href="app/views/assets/images/video.mp4" data-fancybox="video" class="play-btn">
                             <i class="uil uil-play"></i>
                         </a>
                         <span>Unsere Küche in Aktion</span>
@@ -467,7 +467,7 @@ include __DIR__ . '/config/config.php';
                 $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 ?>
 
-<section style="background-image: url(assets/images/menu-bg.png);" class="our-menu section bg-light repeat-img" id="menu">
+<section style="background-image: url(app/views/assets/images/menu-bg.png);" class="our-menu section bg-light repeat-img" id="menu">
     <div class="sec-wp">
         <div class="container">
             <div class="row">
@@ -476,7 +476,7 @@ include __DIR__ . '/config/config.php';
                         <p class="sec-sub-title mb-3">Unsere Speisekarte</p>
                         <h2 class="h2-title">Starte den Tag <span>mit frischer & gesunder Kost</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="views/assets/images/title-shape.svg" alt="Dekorative Linie">
+                            <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
                         </div>
                     </div>
                 </div>
@@ -488,19 +488,19 @@ include __DIR__ . '/config/config.php';
                             <ul class="filters">
                                 <div class="filter-active"></div>
                                 <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                                    <img src="views/assets/images/menu-1.png" alt="">
+                                    <img src="app/views/assets/images/menu-1.png" alt="">
                                     Alle Gerichte
                                 </li>
                                 <li class="filter" data-filter=".breakfast">
-                                    <img src="views/assets/images/menu-2.png" alt="">
+                                    <img src="app/views/assets/images/menu-2.png" alt="">
                                     Frühstück
                                 </li>
                                 <li class="filter" data-filter=".lunch">
-                                    <img src="views/assets/images/menu-3.png" alt="">
+                                    <img src="app/views/assets/images/menu-3.png" alt="">
                                     Mittagessen
                                 </li>
                                 <li class="filter" data-filter=".dinner">
-                                    <img src="views/assets/images/menu-4.png" alt="">
+                                    <img src="app/views/assets/images/menu-4.png" alt="">
                                     Abendessen
                                 </li>
                             </ul>
@@ -598,7 +598,7 @@ function addToCart(itemId) {
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="sec-img mt-5">
-                    <img src="views/assets/images/pizza.png" alt="Leckere Pizza">
+                    <img src="app/views/assets/images/pizza.png" alt="Leckere Pizza">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -624,7 +624,7 @@ function addToCart(itemId) {
             </div>
             <div class="col-lg-6 order-lg-2 order-1">
                 <div class="sec-img">
-                    <img src="views/assets/images/sushi.png" alt="Frisches Sushi">
+                    <img src="app/views/assets/images/sushi.png" alt="Frisches Sushi">
                 </div>
             </div>
         </div>
@@ -633,11 +633,11 @@ function addToCart(itemId) {
 
             <section class="book-table section bg-light">
                 <div class="book-table-shape">
-                    <img src="views/assets/images/table-leaves-shape.png" alt="">
+                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="book-table-shape book-table-shape2">
-                    <img src="views/assets/images/table-leaves-shape.png" alt="">
+                    <img src="app/views/assets/images/table-leaves-shape.png" alt="">
                 </div>
 
                 <div class="sec-wp">
@@ -648,7 +648,7 @@ function addToCart(itemId) {
                     <p class="sec-sub-title mb-3">Tischreservierung</p>
                     <h2 class="h2-title">Öffnungszeiten & Reservierung</h2>
                     <div class="sec-title-shape mb-4">
-                        <img src="views/assets/images/title-shape.svg" alt="Dekoratives Element">
+                        <img src="app/views/assets/images/title-shape.svg" alt="Dekoratives Element">
                     </div>
                 </div>
             </div>
@@ -682,30 +682,30 @@ function addToCart(itemId) {
                             <div class="col-lg-10 m-auto">
                                 <div class="book-table-img-slider" id="icon">
                                     <div class="swiper-wrapper">
-                                        <a href="assets/images/bt1.jpg" data-fancybox="table-slider"
+                                        <a href="app/views/assets/images/bt1.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt1.jpg)"></a>
-                                        <a href="assets/images/bt2.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt1.jpg)"></a>
+                                        <a href="app/views/assets/images/bt2.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt2.jpg)"></a>
-                                        <a href="assets/images/bt3.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt2.jpg)"></a>
+                                        <a href="app/views/assets/images/bt3.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt3.jpg)"></a>
-                                        <a href="assets/images/bt4.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt3.jpg)"></a>
+                                        <a href="app/views/assets/images/bt4.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt4.jpg)"></a>
-                                        <a href="assets/images/bt1.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt4.jpg)"></a>
+                                        <a href="app/views/assets/images/bt1.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt1.jpg)"></a>
-                                        <a href="assets/images/bt2.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt1.jpg)"></a>
+                                        <a href="app/views/assets/images/bt2.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt2.jpg)"></a>
-                                        <a href="assets/images/bt3.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt2.jpg)"></a>
+                                        <a href="app/views/assets/images/bt3.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt3.jpg)"></a>
-                                        <a href="assets/images/bt4.jpg" data-fancybox="table-slider"
+                                            style="background-image: url(app/views/assets/images/bt3.jpg)"></a>
+                                        <a href="app/views/assets/images/bt4.jpg" data-fancybox="table-slider"
                                             class="book-table-img back-img swiper-slide"
-                                            style="background-image: url(assets/images/bt4.jpg)"></a>
+                                            style="background-image: url(app/views/assets/images/bt4.jpg)"></a>
                                     </div>
 
                                     <div class="swiper-button-wp">
@@ -736,7 +736,7 @@ function addToCart(itemId) {
                                     <p class="sec-sub-title mb-3">Unser Team</p>
                                     <h2 class="h2-title">Treffe unsere Chefs</h2>
                                     <div class="sec-title-shape mb-4">
-                                        <img src="views/assets/images/title-shape.svg" alt="">
+                                        <img src="app/views/assets/images/title-shape.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -745,7 +745,7 @@ function addToCart(itemId) {
                             <div class="swiper-wrapper">
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
-                                        <div style="background-image: url(assets/images/chef/c1.jpg);"
+                                        <div style="background-image: url(app/views/assets/images/chef/c1.jpg);"
                                             class="team-img back-img">
 
                                         </div>
@@ -756,7 +756,7 @@ function addToCart(itemId) {
                                 </div>
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
-                                        <div style="background-image: url(assets/images/chef/c2.jpg);"
+                                        <div style="background-image: url(app/views/assets/images/chef/c2.jpg);"
                                             class="team-img back-img">
 
                                         </div>
@@ -767,7 +767,7 @@ function addToCart(itemId) {
                                 </div>
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
-                                        <div style="background-image: url(assets/images/chef/c3.jpg);"
+                                        <div style="background-image: url(app/views/assets/images/chef/c3.jpg);"
                                             class="team-img back-img">
 
                                         </div>
@@ -778,7 +778,7 @@ function addToCart(itemId) {
                                 </div>
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
-                                        <div style="background-image: url(assets/images/chef/c4.jpg);"
+                                        <div style="background-image: url(app/views/assets/images/chef/c4.jpg);"
                                             class="team-img back-img">
 
                                         </div>
@@ -789,7 +789,7 @@ function addToCart(itemId) {
                                 </div>
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
-                                        <div style="background-image: url(assets/images/chef/c5.jpg);"
+                                        <div style="background-image: url(app/views/assets/images/chef/c5.jpg);"
                                             class="team-img back-img">
 
                                         </div>
@@ -822,7 +822,7 @@ function addToCart(itemId) {
                                 <p class="sec-sub-title mb-3">Was sie sagen</p>
                                 <h2 class="h2-title">Was unsere Kunden <span>über uns sagen</span></h2>
                                 <div class="sec-title-shape mb-4">
-                                    <img src="views/assets/images/title-shape.svg" alt="">
+                                    <img src="app/views/assets/images/title-shape.svg" alt="">
                                 </div>
                             </div>
                             </div>
@@ -830,7 +830,7 @@ function addToCart(itemId) {
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="testimonials-img">
-                                    <img src="views/assets/images/testimonial-img.png" alt="">
+                                    <img src="app/views/assets/images/testimonial-img.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-7">
@@ -839,7 +839,7 @@ function addToCart(itemId) {
                                         <div class="testimonials-box">
                                             <div class="testimonial-box-top">
                                                 <div class="testimonials-box-img back-img"
-                                                    style="background-image: url(assets/images/testimonials/t1.jpg);">
+                                                    style="background-image: url(app/views/assets/images/testimonials/t1.jpg);">
                                                 </div>
                                                 <div class="star-rating-wp">
                                                     <div class="star-rating">
@@ -860,7 +860,7 @@ function addToCart(itemId) {
                                                     <div class="testimonials-box">
                                                         <div class="testimonial-box-top">
                                                             <div class="testimonials-box-img back-img"
-                                                                style="background-image: url(assets/images/testimonials/t2.jpg);">
+                                                                style="background-image: url(app/views/assets/images/testimonials/t2.jpg);">
                                                             </div>
                                                             <div class="star-rating-wp">
                                                                 <div class="star-rating">
@@ -881,7 +881,7 @@ function addToCart(itemId) {
                                                     <div class="testimonials-box">
                                                         <div class="testimonial-box-top">
                                                             <div class="testimonials-box-img back-img"
-                                                                style="background-image: url(assets/images/testimonials/t3.jpg);">
+                                                                style="background-image: url(app/views/assets/images/testimonials/t3.jpg);">
                                                             </div>
                                                             <div class="star-rating-wp">
                                                                 <div class="star-rating">
@@ -902,7 +902,7 @@ function addToCart(itemId) {
                                                     <div class="testimonials-box">
                                                         <div class="testimonial-box-top">
                                                             <div class="testimonials-box-img back-img"
-                                                                style="background-image: url(assets/images/testimonials/t4.jpg);">
+                                                                style="background-image: url(app/views/assets/images/testimonials/t4.jpg);">
                                                             </div>
                                                             <div class="star-rating-wp">
                                                                 <div class="star-rating">
@@ -935,7 +935,7 @@ function addToCart(itemId) {
                         <p class="sec-sub-title mb-3">FAQs</p>
                         <h2 class="h2-title">Häufig <span>gestellte Fragen</span></h2>
                         <div class="sec-title-shape mb-4">
-                            <img src="views/assets/images/title-shape.svg" alt="">
+                            <img src="app/views/assets/images/title-shape.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -984,7 +984,7 @@ function addToCart(itemId) {
                             <p class="sec-sub-title mb-3">Unser Blog</p>
                             <h2 class="h2-title">Neueste Beiträge</h2>
                             <div class="sec-title-shape mb-4">
-                                <img src="views/assets/images/title-shape.svg" alt="">
+                                <img src="app/views/assets/images/title-shape.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -993,7 +993,7 @@ function addToCart(itemId) {
                     <div class="col-lg-4">
                         <div class="blog-box">
                             <div class="blog-img back-img"
-                                style="background-image: url(assets/images/blog/blog1.jpg);"></div>
+                                style="background-image: url(app/views/assets/images/blog/blog1.jpg);"></div>
                             <div class="blog-text">
                                 <p class="blog-date">15. September 2021</p>
                                 <a href="#" class="h4-title">Energie-Drink ganz einfach zuhause zubereiten</a>
@@ -1005,7 +1005,7 @@ function addToCart(itemId) {
                     <div class="col-lg-4">
                         <div class="blog-box">
                             <div class="blog-img back-img"
-                                style="background-image: url(assets/images/blog/blog2.jpg);"></div>
+                                style="background-image: url(app/views/assets/images/blog/blog2.jpg);"></div>
                             <div class="blog-text">
                                 <p class="blog-date">15. Oktober 2021</p>
                                 <a href="#" class="h4-title">Frische Gemüse-Reis-Kombination für das Abendessen</a>
@@ -1017,7 +1017,7 @@ function addToCart(itemId) {
                     <div class="col-lg-4">
                         <div class="blog-box">
                             <div class="blog-img back-img"
-                                style="background-image: url(assets/images/blog/blog3.jpg);"></div>
+                                style="background-image: url(app/views/assets/images/blog/blog3.jpg);"></div>
                             <div class="blog-text">
                                 <p class="blog-date">15. November 2021</p>
                                 <a href="#" class="h4-title">Chicken-Burger mit doppelten Nuggets</a>
@@ -1072,7 +1072,7 @@ function addToCart(itemId) {
 
       <!-- Newsletter Box -->
       <div class="col-lg-6">
-        <div class="newsletter-box-wrapper" style="background-image: url('assets/images/news.jpg');">
+        <div class="newsletter-box-wrapper" style="background-image: url('app/views/assets/images/news.jpg');">
           <div class="bg-overlay"></div>
           <div class="content-wrap">
             <h2>Abonniere unseren Newsletter</h2>
@@ -1101,7 +1101,7 @@ function addToCart(itemId) {
                         <div class="footer-info">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="views/assets/logo.png" alt="Logo">
+                                    <img src="app/views/assets/logo.png" alt="Logo">
                                 </a>
                             </div>
                             <p>Besuchen Sie unser Restaurant und geniesen Sie frische, hausgemachte Spezialitäten in angenehmer Atmosphäre.</p>
