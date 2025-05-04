@@ -53,174 +53,181 @@ if (!empty($cart)) {
     <link rel="stylesheet" href="app/views/assets/css/bootstrap.min.css">
     <style>
         body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
-    color: #1a1a1a;
-    margin: 0;
-}
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f7fa;
+            color: #1a1a1a;
+            margin: 0;
+        }
 
-.site-header {
-    background: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-}
+        .site-header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
 
-.header-cart {
-    position: relative;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #333;
-}
+        .header-cart {
+            position: relative;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #333;
+        }
 
-.cart-number {
-    background: crimson;
-    color: white;
-    border-radius: 50%;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.55rem;
-    position: absolute;
-    top: -8px;
-    right: -10px;
-    font-weight: bold;
-    box-shadow: 0 0 0 2px #fff;
-}
+        .cart-number {
+            background: crimson;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.55rem;
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            font-weight: bold;
+            box-shadow: 0 0 0 2px #fff;
+        }
 
-h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1c1c1c;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1c1c1c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
 
-.table {
-    background-color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
+        .table {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
 
-.table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    padding: 1rem;
-}
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            padding: 1rem;
+        }
 
-.table td,
-.table th {
-    text-align: center;
-    vertical-align: middle !important;
-    padding: 1.2rem;
-}
+        .table td,
+        .table th {
+            text-align: center;
+            vertical-align: middle !important;
+            padding: 1.2rem;
+        }
 
-.table tr:hover {
-    background-color: #f9fbff;
-}
+        .table tr:hover {
+            background-color: #f9fbff;
+        }
 
-.table img {
-    border-radius: 12px;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    transition: transform 0.2s ease;
-}
+        .table img {
+            border-radius: 12px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+        }
 
-.table img:hover {
-    transform: scale(1.05);
-}
+        .table img:hover {
+            transform: scale(1.05);
+        }
 
-.quantity-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.2s ease;
-}
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
 
-.quantity-btn:hover {
-    background-color: #e6e6e6;
-    color: black;
-}
+        .quantity-btn:hover {
+            background-color: #e6e6e6;
+            color: black;
+        }
 
-.mx-2 {
-    margin: 0 0.75rem;
-    font-weight: 500;
-    font-size: 16px;
-}
+        .delete-btn {
+            font-size: 18px;
+            line-height: 1;
+            padding: 0.45rem 0.6rem;
+            margin-left: 0.5rem;
+        }
 
-h3 {
-    font-weight: bold;
-    color: #0f172a;
-    font-size: 1.8rem;
-    text-align: right;
-}
+        .mx-2 {
+            margin: 0 0.75rem;
+            font-weight: 500;
+            font-size: 16px;
+        }
 
-.btn-primary {
-    background-color: #0d6efd;
-    border: none;
-    padding: 0.6rem 1.4rem;
-    border-radius: 12px;
-    font-weight: 600;
-    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
-    transition: all 0.3s ease;
-}
+        h3 {
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 1.8rem;
+            text-align: right;
+        }
 
-.btn-primary:hover {
-    background-color: #084cdf;
-    transform: translateY(-2px);
-}
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease;
+        }
 
-.btn-secondary {
-    background-color: #6c757d;
-    border: none;
-    padding: 0.6rem 1.4rem;
-    border-radius: 12px;
-    font-weight: 600;
-    box-shadow: 0 5px 10px rgba(108, 117, 125, 0.2);
-    transition: all 0.3s ease;
-}
+        .btn-primary:hover {
+            background-color: #084cdf;
+            transform: translateY(-2px);
+        }
 
-.btn-secondary:hover {
-    background-color: #545b62;
-    transform: translateY(-2px);
-}
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 5px 10px rgba(108, 117, 125, 0.2);
+            transition: all 0.3s ease;
+        }
 
-@media (max-width: 768px) {
-    .table thead {
-        display: none;
-    }
+        .btn-secondary:hover {
+            background-color: #545b62;
+            transform: translateY(-2px);
+        }
 
-    .table, .table tbody, .table tr, .table td {
-        display: block;
-        width: 100%;
-    }
+        @media (max-width: 768px) {
+            .table thead {
+                display: none;
+            }
 
-    .table tr {
-        margin-bottom: 1rem;
-        background-color: white;
-        padding: 1rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
+            .table, .table tbody, .table tr, .table td {
+                display: block;
+                width: 100%;
+            }
 
-    .table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
+            .table tr {
+                margin-bottom: 1rem;
+                background-color: white;
+                padding: 1rem;
+                border-radius: 12px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            }
 
-    .table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        width: 45%;
-        font-weight: bold;
-        text-align: left;
-    }
-}
+            .table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 1rem;
+                width: 45%;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -257,7 +264,7 @@ h3 {
             </thead>
             <tbody>
                 <?php foreach ($food_items as $item): ?>
-                    <tr>
+                    <tr data-id="<?= $item['id']; ?>" data-price="<?= $item['price']; ?>">
                         <td>
                             <img src="<?= $item['image'] ? 'uploads/' . htmlspecialchars(basename($item['image'])) : 'assets/images/no-image.png'; ?>"
                                  alt="<?= htmlspecialchars($item['name']); ?>">
@@ -267,24 +274,25 @@ h3 {
                         <td>
                             <div class="d-flex align-items-center justify-content-center">
                                 <button class="btn btn-sm btn-outline-secondary quantity-btn" data-id="<?= $item['id']; ?>" data-action="minus">&minus;</button>
-                                <span class="mx-2"><?= $item['quantity']; ?></span>
+                                <span class="mx-2 quantity"><?= $item['quantity']; ?></span>
                                 <button class="btn btn-sm btn-outline-secondary quantity-btn" data-id="<?= $item['id']; ?>" data-action="plus">+</button>
+                                <button class="btn btn-sm btn-danger delete-btn" data-id="<?= $item['id']; ?>" title="Entfernen">🗑️</button>
                             </div>
                         </td>
-                        <td>€ <?= number_format($item['price'] * $item['quantity'], 2); ?></td>
+                        <td class="item-total">€ <?= number_format($item['price'] * $item['quantity'], 2); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
         <div class="text-right mt-4">
-            <h3>Gesamtpreis: € <?= number_format($total_price, 2); ?></h3>
+            <h3>Gesamtpreis: € <span id="grand-total"><?= number_format($total_price, 2); ?></span></h3>
         </div>
 
         <div class="d-flex justify-content-between mt-4">
             <a href="index.php" class="btn btn-secondary">Zurück zur Speisekarte</a>
             <a href="payment.php?total=<?= number_format($total_price, 2, '.', ''); ?>" class="btn btn-primary">Zur Kasse</a>
-            </div>
+        </div>
     <?php else: ?>
         <p class="text-center">Ihr Warenkorb ist leer.</p>
         <div class="text-center">
@@ -298,15 +306,47 @@ h3 {
 <script>
 $(document).ready(function () {
     $('.quantity-btn').click(function () {
-        const id = $(this).data('id');
-        const action = $(this).data('action');
+        const button = $(this);
+        const id = button.data('id');
+        const action = button.data('action');
+        const row = button.closest('tr');
+        const quantitySpan = row.find('.quantity');
+        const itemTotalCell = row.find('.item-total');
+        const pricePerItem = parseFloat(row.data('price'));
 
         $.post('update_cart.php', { id: id, action: action }, function (res) {
             if (res.success !== false) {
-                location.reload();
+                let quantity = parseInt(quantitySpan.text());
+                quantity = action === 'plus' ? quantity + 1 : quantity - 1;
+                if (quantity < 1) return;
+
+                quantitySpan.text(quantity);
+                const newItemTotal = (quantity * pricePerItem).toFixed(2);
+                itemTotalCell.text('€ ' + newItemTotal);
+                updateGrandTotal();
             }
         }, 'json');
     });
+
+    $('.delete-btn').click(function () {
+    const id = $(this).data('id');
+
+    $.post('update_cart.php', { id: id, action: 'delete' }, function (res) {
+        if (res.success !== false) {
+            // Reload the page after deletion
+            location.reload();
+        }
+    }, 'json');
+});
+
+    function updateGrandTotal() {
+        let total = 0;
+        $('.item-total').each(function () {
+            const value = parseFloat($(this).text().replace('€', '').trim());
+            total += value;
+        });
+        $('#grand-total').text(total.toFixed(2));
+    }
 });
 </script>
 

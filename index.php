@@ -164,6 +164,23 @@ include __DIR__ . '/config/config.php';
   transition: 0.3s;
 }
 
+.dish-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: -140px auto 10px auto;
+    border: 10px solid white;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dish-info b {
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+}
+
 /* Mobile Menü initially hidden */
 @media (max-width: 991px) {
   #mainNav {
@@ -467,105 +484,80 @@ include __DIR__ . '/config/config.php';
                 $food_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 ?>
 
-<section style="background-image: url(app/views/assets/images/menu-bg.png);" class="our-menu section bg-light repeat-img" id="menu">
-    <div class="sec-wp">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="sec-title text-center mb-5">
-                        <p class="sec-sub-title mb-3">Unsere Speisekarte</p>
-                        <h2 class="h2-title">Starte den Tag <span>mit frischer & gesunder Kost</span></h2>
-                        <div class="sec-title-shape mb-4">
-                            <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-tab-wp">
-                <div class="row">
-                    <div class="col-lg-12 m-auto">
-                        <div class="menu-tab text-center">
-                            <ul class="filters">
-                                <div class="filter-active"></div>
-                                <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                                    <img src="app/views/assets/images/menu-1.png" alt="">
-                                    Alle Gerichte
-                                </li>
-                                <li class="filter" data-filter=".breakfast">
-                                    <img src="app/views/assets/images/menu-2.png" alt="">
-                                    Frühstück
-                                </li>
-                                <li class="filter" data-filter=".lunch">
-                                    <img src="app/views/assets/images/menu-3.png" alt="">
-                                    Mittagessen
-                                </li>
-                                <li class="filter" data-filter=".dinner">
-                                    <img src="app/views/assets/images/menu-4.png" alt="">
-                                    Abendessen
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<?php
+// Pick 3 random dishes for "Alle Gerichte"
+$shuffled_items = $food_items;
+shuffle($shuffled_items);
+$random_items = array_slice($shuffled_items, 0, 3);
+$shown_ids = array_column($random_items, 'id');
+?>
 
-            <!-- Dynamische Speisekarte -->
-            <div class="menu-list-row">
-                <div class="row g-xxl-5 bydefault_show" id="menu-dish">
-                    <?php foreach ($food_items as $item): ?>
-                        <div class="col-lg-4 col-sm-6 dish-box-wp <?= strtolower($item['category']); ?>" data-cat="<?= strtolower($item['category']); ?>">
-                            <div class="dish-box text-center">
-                                <div class="dist-img">
-                                    <?php 
-                                        // Prüfe, ob das Bild existiert, sonst Standardbild verwenden
-                                        $imagePath = !empty($item['image']) && file_exists(__DIR__ . "/uploads/" . basename($item['image'])) 
-                                            ? "uploads/" . htmlspecialchars(basename($item['image'])) 
-                                            : "assets/images/no-image.png"; 
-                                    ?>
-                                    <img src="<?= $imagePath ?>" 
-                                        alt="<?= htmlspecialchars($item['name']); ?>" 
-                                        onerror="this.onerror=null; this.src='assets/images/no-image.png';">
-                                </div>
-                                <div class="dish-rating">
-                                    <?= number_format($item['rating'], 1) ?>
-                                    <i class="uil uil-star"></i>
-                                </div>
-                                <div class="dish-title">
-                                    <h3 class="h3-title"><?= htmlspecialchars($item['name']); ?></h3>
-                                    <p><?= htmlspecialchars($item['calories']); ?> Kalorien</p>
-                                </div>
-                                <div class="dish-info">
-                                    <ul>
-                                        <li>
-                                            <p>Art</p>
-                                            <b><?= htmlspecialchars($item['type']); ?></b>
-                                        </li>
-                                        <li>
-                                            <p>Portionen</p>
-                                            <b><?= htmlspecialchars($item['persons']); ?></b>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="dist-bottom-row">
-                                    <ul>
-                                        <li>
-                                            <b>€ <?= number_format($item['price'], 2); ?></b>
-                                        </li>
-                                        <li>
-                                        <button class="dish-add-btn" onclick="addToCart(<?= $item['id']; ?>)">
-                                            <i class="uil uil-plus"></i>
-                                        </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+<section style="background-image: url(app/views/assets/images/menu-bg.png);" class="our-menu section bg-light repeat-img" id="menu">
+  <div class="sec-wp">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="sec-title text-center mb-5">
+            <p class="sec-sub-title mb-3">Unsere Speisekarte</p>
+            <h2 class="h2-title">Starte den Tag <span>mit frischer & gesunder Kost</span></h2>
+            <div class="sec-title-shape mb-4">
+              <img src="app/views/assets/images/title-shape.svg" alt="Dekorative Linie">
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="menu-tab-wp">
+        <div class="row">
+          <div class="col-lg-12 m-auto">
+            <div class="menu-tab text-center">
+              <ul class="filters">
+                <div class="filter-active"></div>
+                <li class="filter" data-filter=".all"><img src="app/views/assets/images/menu-1.png" alt="">Für Dich</li>
+                <li class="filter" data-filter=".breakfast"><img src="app/views/assets/images/menu-2.png" alt="">Frühstück</li>
+                <li class="filter" data-filter=".lunch"><img src="app/views/assets/images/menu-3.png" alt="">Mittagessen</li>
+                <li class="filter" data-filter=".dinner"><img src="app/views/assets/images/menu-4.png" alt="">Abendessen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPEISEKARTE -->
+      <div class="menu-list-row">
+        <div class="row g-xxl-5" id="menu-dish">
+
+          <!-- SHOW ONLY 3 DISHES FOR ALLE GERICHTE -->
+          <?php foreach ($random_items as $item): ?>
+            <div class="col-lg-4 col-sm-6 dish-box-wp mix all <?= strtolower($item['category']); ?>">
+              <?php include 'dish-box.php'; ?>
+            </div>
+          <?php endforeach; ?>
+
+          <!-- SHOW REST OF DISHES FOR FILTERING (WITHOUT DUPLICATES) -->
+          <?php foreach ($food_items as $item): ?>
+            <?php if (!in_array($item['id'], $shown_ids)): ?>
+              <div class="col-lg-4 col-sm-6 dish-box-wp mix <?= strtolower($item['category']); ?>">
+                <?php include 'dish-box.php'; ?>
+              </div>
+            <?php endif; ?>
+          <?php endforeach; ?>
+
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
+<script>
+  $(document).ready(function () {
+    $('#menu-dish').mixItUp({
+      load: {
+        filter: '.all'
+      }
+    });
+  });
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -1177,6 +1169,16 @@ function addToCart(itemId) {
 <script src="app/views/assets/js/smooth-scroll.js"></script>
 <script src="app/views/assets/main.js"></script>
 
+
+<script>
+  $(document).ready(function () {
+    $('#menu-dish').mixItUp({
+      load: {
+        filter: '.all'
+      }
+    });
+  });
+</script>
 
 </body>
 
