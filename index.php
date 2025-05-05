@@ -181,64 +181,12 @@ include __DIR__ . '/config/config.php';
     word-break: break-word;
 }
 
-/* Mobile Menü initially hidden */
-@media (max-width: 991px) {
-  #mainNav {
-    display: none;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
 
-  #mainNav.show {
-    display: flex;
-  }
-
-  .header-menu ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  .header-menu ul li {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .header-right {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header-search-form {
-    display: none !important;
-  }
-
-  /* Login Dropdown – Mobile Fix */
-@media (max-width: 991px) {
-  .login-dropdown {
-    right: 50% !important;
-    transform: translateX(50%);
-    top: 40px !important;
-    width: 90vw;
-    max-width: 300px;
-  }
-
-  .header-btn {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .login-dropdown input,
-  .login-dropdown button {
-    font-size: 15px;
-  }
-}
-}
 
     </style>
 </head>
 
-<body class="body-fixed">
+<body>
     <!-- Beginn der Kopfzeile -->
     <header class="site-header">
   <div class="container">

@@ -2,19 +2,25 @@
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 
+/* ************************** */ /* ************************** */ /* ************************** */
+:root {
+  /* will be set in JS */
+  --footer-height: 0px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   text-rendering: optimizeLegibility !important;
   background: #f3f3f5;
 }
 
-.body-fixed {
+/* .body-fixed {
   position: fixed;
   width: 100%;
   height: 100vh;
   top: auto;
   left: auto;
-}
+} */
 
 body,
 html {
@@ -423,7 +429,10 @@ ul {
 
 /* ************************** */
 
-@media screen and (min-width: 992px) {
+/* ************************** */ /* ************************** */ /* ************************** */
+/* ************************** */ /* ************************** */ /* ************************** */
+
+/* @media screen and (min-width: 992px) {
   #viewport {
     overflow: hidden;
     position: fixed;
@@ -441,6 +450,44 @@ ul {
     top: 0;
     left: 0;
   }
+} */
+
+@media screen and (min-width: 992px) {
+  #viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--footer-height);
+    overflow: hidden; /* keep this */
+  }
+  #js-scroll-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--footer-height);
+    overflow-y: auto; /* vertical scroll only */
+    overflow-x: hidden; /* hide that horizontal scrollbar */
+  }
+}
+
+.header-menu {
+  background-color: transparent; /* we’ll move the blur into a layer */
+  position: relative; /* so our pseudo–element is positioned to it */
+}
+
+.header-menu::before {
+  content: "";
+  position: fixed; /* fix to the viewport edges */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 130px; /* match your dropdown’s height */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  pointer-events: none; /* clicks still go to your links */
+  z-index: -1; /* sit *behind* your menu items */
 }
 
 @media (max-width: 991px) {
