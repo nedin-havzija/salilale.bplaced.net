@@ -2,7 +2,7 @@
 session_start();
 $total = $_SESSION['total_price'] ?? ($_GET['total'] ?? 0);
 $shipping = 6.90;
-$tax_rate = 0.061;
+$tax_rate = 0.081;
 $tax = $total * $tax_rate;
 $total_with_tax = $total + $shipping + $tax;
 
